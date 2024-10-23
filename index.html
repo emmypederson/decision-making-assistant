@@ -1,0 +1,63 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the x values
+x = np.linspace(-10, 10, 400)
+
+# Parent Functions
+linear = 2 * x + 1
+quadratic = x**2
+cubic = x**3
+absolute = np.abs(x)
+exponential = 2**x
+
+# Create the plots
+plt.figure(figsize=(12, 8))
+
+# Linear Function
+plt.subplot(3, 2, 1)
+plt.plot(x, linear, label='f(x) = 2x + 1', color='blue')
+plt.title('Linear Function')
+plt.axhline(0, color='black',linewidth=0.5, ls='--')
+plt.axvline(0, color='black',linewidth=0.5, ls='--')
+plt.grid()
+plt.legend()
+
+# Quadratic Function
+plt.subplot(3, 2, 2)
+plt.plot(x, quadratic, label='f(x) = x^2', color='green')
+plt.title('Quadratic Function')
+plt.axhline(0, color='black',linewidth=0.5, ls='--')
+plt.axvline(0, color='black',linewidth=0.5, ls='--')
+plt.grid()
+plt.legend()
+
+# Cubic Function
+plt.subplot(3, 2, 3)
+plt.plot(x, cubic, label='f(x) = x^3', color='red')
+plt.title('Cubic Function')
+plt.axhline(0, color='black',linewidth=0.5, ls='--')
+plt.axvline(0, color='black',linewidth=0.5, ls='--')
+plt.grid()
+plt.legend()
+
+# Absolute Function
+plt.subplot(3, 2, 4)
+plt.plot(x, absolute, label='f(x) = |x|', color='purple')
+plt.title('Absolute Function')
+plt.axhline(0, color='black',linewidth=0.5, ls='--')
+plt.axvline(0, color='black',linewidth=0.5, ls='--')
+plt.grid()
+plt.legend()
+
+# Exponential Function
+plt.subplot(3, 2, 5)
+plt.plot(x, exponential, label='f(x) = 2^x', color='orange')
+plt.title('Exponential Function')
+plt.axhline(0, color='black',linewidth=0.5, ls='--')
+plt.axvline(0, color='black',linewidth=0.5, ls='--')
+plt.grid()
+plt.legend()
+
+plt.tight_layout()
+plt.show()
